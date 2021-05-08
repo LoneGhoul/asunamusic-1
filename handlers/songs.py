@@ -12,7 +12,7 @@ def time_to_seconds(time):
 
 
 @Client.on_message(filters.command('song') & ~filters.private & ~filters.channel)
-def song(client, message):
+def music(client, message):
 
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
