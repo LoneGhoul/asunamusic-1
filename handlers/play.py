@@ -93,9 +93,9 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
 
-@Client.on_message(command("play") & other_filters)
+@Client.on_message(command("ytt") & other_filters)
 @errors
-async def play(_, message: Message):
+async def ytt(_, message: Message):
 
     lel = await message.reply("🔄 **Processing** Sounds...")
     sender_id = message.from_user.id
@@ -106,7 +106,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="Channel",
-                        url="https://t.me/Infinity_BOTs")
+                        url="https://t.me/WeebsGuild")
                    
                 ]
             ]
@@ -123,7 +123,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/638c20c44ca418c8b2178.jpg"
+        thumb_name = "https://telegra.ph/file/d068aa2626387c4a7039c.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -132,7 +132,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton(
                             text="Channel",
-                            url=f"https://t.me/Infinity_Bots")
+                            url=f"https://t.me/WeebsGuild")
 
                     ]
                 ]
@@ -168,7 +168,7 @@ async def play(_, message: Message):
                 )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/638c20c44ca418c8b2178.jpg"
+            thumb_name = "https://telegra.ph/file/d068aa2626387c4a7039c.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
