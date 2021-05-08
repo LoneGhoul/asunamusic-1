@@ -6,7 +6,7 @@ from helpers.filters import other_filters2
 
 
 @Client.on_message(other_filters2)
-async def start(_, message: Message):
+async def nigga(_, message: Message):
     await message.reply_sticker("CAACAgQAAx0CTv65QgABBfJlYF6VCrGMm6OJ23AxHmD6qUSWESsAAhoQAAKm8XEeD5nrjz5IJFYeBA")
     await message.reply_text(
         f"""**Hey, I'm {bn} 🎵
@@ -37,7 +37,7 @@ Add me to your group and play music freely!**
     )
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
-async def gstart(_, message: Message):
+async def gnigga(_, message: Message):
       await message.reply_text("""**Group Music Player Online ✅**""",
       reply_markup=InlineKeyboardMarkup(
             [
